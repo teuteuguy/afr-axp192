@@ -39,6 +39,13 @@ typedef struct {
  */
 axp192_err_t eAXP192Init( axp192_config_t config );
 
+axp192_err_t eAXP192GetVbat( uint16_t * vbat );
+axp192_err_t eAXP192GetVaps( uint16_t * vaps );
+axp192_err_t eAXP192SetSleep( void );
+
+axp192_err_t eAXP192SetRegisterBits(uint8_t register_address, uint8_t bits_to_set);
+axp192_err_t eAXP192ClearRegisterBits(uint8_t register_address, uint8_t bits_to_clear);
+
 // Group 1: Basic power control )
 #define AXP192_REG_INPUT_POWER_STATUS                               ( 0x00 )
 #define AXP192_REG_MODE_POWER_CHARGE_STATUS                         ( 0x01 )
